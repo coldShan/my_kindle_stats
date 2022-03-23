@@ -111,7 +111,7 @@ class Kindle:
         return book_title, book_authors
 
     def make_all_books_list(self):
-        year = datetime.now().year
+        year = datetime.now().year - 1
         self.make_session()
         year_books_info = self.get_kindle_read_data()
         titles_read = year_books_info.get("goal_info", {}).get("titles_read")
